@@ -17,7 +17,7 @@ public class MovieStreamController implements ErrorController {
     public static final String VIDEO_DIRECTORY_FROM_MAC = "/Volumes/Tee/stream/";
     public static final String VIDEO_DIRECTORY_FROM_WINDOWS = "F:\\Stream\\";
 
-    private MovieCatalogService movieCatalogService;
+    private final MovieCatalogService movieCatalogService;
 
     public MovieStreamController(MovieCatalogService movieCatalogService) {
         this.movieCatalogService = movieCatalogService;

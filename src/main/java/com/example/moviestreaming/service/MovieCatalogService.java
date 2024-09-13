@@ -16,9 +16,10 @@ public class MovieCatalogService {
     }
 
     public String getMoviePath(Long movieId) {
-         return restTemplate.getForEntity(
-                 CATALOG_SERVICE +"/movie-info/list/" + movieId, String.class,
-                 movieId)
+        String url =  CATALOG_SERVICE +"/movies/video/" + movieId;
+        System.out.println("Calling: " + url);
+         return restTemplate
+                 .getForEntity(url, String.class,movieId)
                  .getBody();
     }
 }
